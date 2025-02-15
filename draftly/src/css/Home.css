@@ -1,0 +1,31 @@
+
+#title {
+    justify-content: flex-start;
+    font-size: 50px;
+    color: black;
+}
+
+#home {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-2 {
+    height: 20vh;
+}
+
+#landing-page {
+
+    background-image: url('../assets/logo_draft.png');
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height: 60vh;
+    width: 100vw;
+}
+
+#stepboxes {
+    display: flex;
+    flex-direction: row;
+}
