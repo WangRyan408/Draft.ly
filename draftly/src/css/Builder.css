@@ -1,3 +1,10 @@
-div {
-    text-color: black;
+#builder {
+    margin-top: 100px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#required-legend {
+    text-align: left;
+    margin-left: 100px;
 }
