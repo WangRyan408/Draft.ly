@@ -24,14 +24,14 @@ function Builder() {
       const addEducationSection = () => {
         setEducationSections([
           ...educationSections,
-          { school: '', degree: '' },
+          { school: '', startDate: '', endDate: '' },
         ]);
       };
 
       const addProjectSection = () => {
         setProjectSections([
           ...projectSections,
-          { school: '', degree: '' },
+          { title: '', projectStart: '', projectEnd: '', description: '' },
         ]);
       };
 
@@ -45,7 +45,7 @@ function Builder() {
       const updateProjectField = (index, field, value) => {
         const newProject = [...projectSections];
         newProject[index][field] = value;
-        setEducationSections(newProject);
+        setProjectSections(newProject);
       };
 
 
@@ -60,6 +60,7 @@ function Builder() {
         try {
             const response = await axios.post('http://localhost:3000/api/genCV/test', postData);
             console.log(response);
+            //window.location.href = 'http://localhost:3000/api/genCV/test?download=true';
     } catch (error) {
         console.log("Error Sending Post Request: ",error);
     }
@@ -144,7 +145,7 @@ function Builder() {
                 <div className='builder-input-wrapper-1'>
               <input
                 type="text"
-                placeholder="First Name"
+                placeholder="Project Title"
                 value={info.title}
                 onChange={(e) =>
                   updateProjectField(index, 'title', e.target.value)
