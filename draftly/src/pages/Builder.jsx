@@ -1,5 +1,5 @@
 import '../css/Builder.css';
-import arrow from '../assets/dashed_arrow_small.png';
+import arrow from '../assets/dashed_arrow.png';
 
 
 function Builder() {

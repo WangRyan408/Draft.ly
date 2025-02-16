@@ -1,5 +1,10 @@
 import '../css/About.css';
-import placeholder from '../assets/placeholder_guy.jpg';
+import jellyfish from '../assets/icon_jellyfish.png';
+import cat from '../assets/icon_cat.png';
+import goose from '../assets/icon_goose.png';
+import shiba from '../assets/icon_shiba.png';
+import shrimp from '../assets/icon_shrimp.png';
+import weiner_dog from '../assets/icon_weiner_dog.png';
 
 function About() {
     return (
@@ -18,42 +23,42 @@ function About() {
                     <div className='card'>
                         <div className='name'>Wilfredo Concepion</div>
                         <div className='image'>
-                            <img src={placeholder}></img>
+                            <img src={shiba}></img>
                         </div>
                         <div className='role'>Front-End Developer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Andre Dinh</div>
                         <div className='image'>
-                            <img src={placeholder}></img>
+                            <img src={weiner_dog}></img>
                         </div>
                         <div className='role'>Front-End Developer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Marl Jonson</div>
                         <div className='image'>
-                            <img src={placeholder}></img>
+                            <img src={jellyfish}></img>
                         </div>
                         <div className='role'>Front-End Developer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Jay Torres</div>
                         <div className='image'>
-                            <img src={placeholder}></img>
+                            <img src={shrimp}></img>
                         </div>
                         <div className='role'>Front-End Developer, Designer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Jasmine Tu</div>
                         <div className='image'>
-                            <img src={placeholder}></img>
+                            <img src={cat}></img>
                         </div>
                         <div className='role'>Front-End Developer, Designer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Ryan Wang</div>
                         <div className='image'>
-                            <img src={placeholder}></img>
+                            <img src={goose}></img>
                         </div>
                         <div className='role'>Back-End Developer</div>
                     </div>
