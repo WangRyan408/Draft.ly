@@ -3,7 +3,8 @@ import placeholder from '../assets/placeholder_guy.jpg';
 
 function About() {
     return (
-        <div>
+        <div className='fade-in'>
+            <title>About | Draftly</title>
             <div id='section-1'>
                 <h1 id='h1-about'>Why Draftly?</h1>
             </div>
@@ -20,14 +21,14 @@ function About() {
                         <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div className='role'>Front-end designer</div>
+                        <div className='role'>Front-end developer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Andre Dinh</div>
                         <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div className='role'>Front-end designer</div>
+                        <div className='role'>Front-end developer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Marl Jonson</div>
@@ -48,7 +49,7 @@ function About() {
                         <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div className='role'>Front-end designer</div>
+                        <div className='role'>Front-end developer</div>
                     </div>
                     <div className='card'>
                         <div className='name'>Ryan Wang</div>

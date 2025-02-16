@@ -4,7 +4,8 @@ import arrow from '../assets/dashed_arrow_small.png';
 
 function Builder() {
     return (
-        <div>
+        <div className='fade-in'>
+            <title>Builder | Draftly</title>
             <div id='section-1'>
                 <div className='title'>
                     Let&apos;s get started
@@ -36,8 +37,8 @@ function Builder() {
                     <input type='text' placeholder='School, college, or university name'/>
                 </div>
                 <div className='builder-input-wrapper-2'>
-                    <input type='text' placeholder='Start year (ex: 2022)'/>
-                    <input type='text' placeholder='End year (ex: 2026)'/>
+                    <input type='text' placeholder='Start year'/>
+                    <input type='text' placeholder='End year'/>
                 </div>
 
                 <br></br>
@@ -49,11 +50,11 @@ function Builder() {
                     <input type='text' placeholder='Project title'/>
                 </div>
                 <div className='builder-input-wrapper-2'>
-                    <input type='text' placeholder='Start month and year (ex: Jun. 2024)'/>
-                    <input type='text' placeholder='End month and year (ex: Aug. 2024)'/>
+                    <input type='text' placeholder='Start month, year (ex: Jun. 2024)'/>
+                    <input type='text' placeholder='End month, year (ex: Aug. 2024)'/>
                 </div>
                 <div className='builder-input-wrapper-1'>
-                    <input type='text' placeholder='What you did...'/>
+                    <input type='text' placeholder='Describe what you did...'/>
                 </div>
 
                 <br></br>

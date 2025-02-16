@@ -30,7 +30,6 @@ export default function Navbar() {
                 Builder
               </NavLink>
             </li>
-            /TEMP FOR TEST/
             <li className='nav-link'>
               <NavLink
                 to="/Loading"

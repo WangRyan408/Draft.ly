@@ -1,3 +1,16 @@
+.fade-in {
+    animation: fade-in 0.75s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
 #loading-page img {
     width: 500px;
     margin-top: 380px;

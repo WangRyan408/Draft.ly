@@ -14,8 +14,8 @@ function Home() {
     const navigate = useNavigate();
 
     return (
-        <div id='home'>
-
+        <div id='home' className='fade-in'>
+            <title>Home | Draftly</title>
             <div id='landing-page'>
                 <br></br>
                 <div id='landing-page-image'>
@@ -25,7 +25,7 @@ function Home() {
 
             <div id='section-2'>
                 <h2 id='subtext-1'>Custom resume generation on a job-by-job basis.</h2>
-                <button id='get-started' onClick={() => navigate('/Builder')}>Get Started</button>
+                <button id='get-started' onClick={() => navigate('/Builder')}>Get started</button>
             </div>
 
             <div id='section-3'>
