@@ -1,4 +1,5 @@
 import '../css/Builder.css';
+import arrow from '../assets/dashed_arrow_small.png';
 
 
 function Builder() {
@@ -11,8 +12,8 @@ function Builder() {
                 <div className='description'>
                     Before perfecting your resume, Draftly needs to know a bit about you.
                 </div>
-                <div className='title'>
-                    ↓
+                <div id='arrow'>
+                    <img src={arrow}></img>
                 </div>
             </div>
             <div id='builder-section-2'>
