@@ -9,3 +9,9 @@
   src: local("CabinSketch-Regular"), 
       url("./fonts/CabinSketch-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "VT323";
+  src: local("VT323-Regular"), 
+      url("./fonts/VT323-Regular.ttf") format("truetype");
+}
