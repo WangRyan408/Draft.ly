@@ -3,34 +3,31 @@ import '../css/Builder.css';
 
 function Builder() {
     return (
-        <div id='builder'>
-            <h1>Resume Builder</h1>
-            <p id='required-legend'>*Required</p>
-            <div id='your-info'>
-                <div>
-                    <p></p>
-                    <input type="text" />
+        <div>
+            <div id='section-1'>
+                <div class='title'>
+                    Let's get started
                 </div>
-                <div>
-                    <p></p>
-                    <input type="text" />
+                <div class='description'>
+                    Before we can make your resume, Draftly needs to know a bit about you.
                 </div>
-                <div>
-                    <p></p>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-                <div>
-                    <p></p>
+                <div class='title'>
+                    ↓
                 </div>
             </div>
+            <div id='section-2'>
+                <div class='build-label'>
+                    Your Information
+                </div>
+                
+                <div class='build-label'>
+                    Your Experience
+                </div>
 
-
-
+                <div class='build-label'>
+                    Job Description
+                </div>
+            </div>
         </div>
     );
 }
