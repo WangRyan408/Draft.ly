@@ -3,13 +3,11 @@ import { useNavigate } from 'react-router-dom';
 //styling
 import '../css/Home.css';
 import "../fonts/CabinSketch-Regular.ttf";
+import "../fonts/VT323-Regular.ttf";
 
 //images
 import logo from '../assets/logo_draft.png';
 import wordmark from '../assets/wordmark.png';
-
-
-
 
 function Home() {
 
@@ -35,35 +33,35 @@ function Home() {
                 <h2>Generate your resume in three easy steps.</h2>
 
                 <div id='main-boxes-wrapper'>
-                    <div class="card">
+                    <div className="card">
                         <div>
                             Step 1
-                                <div class="card-desc">
+                                <div className="card-desc">
                                     Enter your information.
                                 </div>
-                                <div class="card-image">
+                                <div className="card-image">
                                     <img src={logo}></img>
                                 </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div className="card">
                         <div>
                             Step 2
-                                <div class="card-desc">
+                                <div className="card-desc">
                                     Enter job description.
                                 </div>
-                                <div class="card-image">
+                                <div className="card-image">
                                     <img src={logo}></img>
                                 </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div className="card">
                         <div>
                             Step 3
-                                <div class="card-desc">
+                                <div className="card-desc">
                                     Generate your resume!
                                 </div>
-                                <div class="card-image">
+                                <div className="card-image">
                                     <img src={logo}></img>
                                 </div>
                         </div>
