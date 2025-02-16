@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 //styling
 import '../css/Loading.css';
 import "../fonts/CabinSketch-Regular.ttf";
+import "../fonts/VT323-Regular.ttf";
 import logo from '../assets/loading.gif';
 import airplane from '../assets/paper_airplane.gif';
 

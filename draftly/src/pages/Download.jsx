@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 //styling
 import '../css/Download.css';
 import "../fonts/CabinSketch-Regular.ttf";
+import "../fonts/VT323-Regular.ttf";
 
 function Download() {
     return (
