@@ -29,16 +29,20 @@ body {
 }
 
 #landing-page {
-    height: 60vh;
     margin: auto;
     justify-content: center;
     text-align: center;
 }
 
 #landing-page-image img {
-    width: 55vw;
+    width: 45vw;
     justify-content: center;
     text-align: center;
+}
+
+#get-started {
+    background-color: rgb(73, 144, 109);
+    border: 0;
 }
 
 h1 {
@@ -47,7 +51,6 @@ h1 {
     text-align: center;
     justify-content: center;
 }
-
 
 #stepboxes {
     display: flex;
