@@ -15,47 +15,47 @@ function About() {
             <div id='devs-wrapper'>
                 <h2>Developers</h2>
                 <div id='devs-wrapper-cards'>
-                    <div class='card'>
-                        <div class='name'>Wilfredo Concepion</div>
-                        <div class='image'>
+                    <div className='card'>
+                        <div className='name'>Wilfredo Concepion</div>
+                        <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div class='role'>Front-end designer</div>
+                        <div className='role'>Front-end designer</div>
                     </div>
-                    <div class='card'>
-                        <div class='name'>Andre Dinh</div>
-                        <div class='image'>
+                    <div className='card'>
+                        <div className='name'>Andre Dinh</div>
+                        <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div class='role'>Front-end designer</div>
+                        <div className='role'>Front-end designer</div>
                     </div>
-                    <div class='card'>
-                        <div class='name'>Marl Jonson</div>
-                        <div class='image'>
+                    <div className='card'>
+                        <div className='name'>Marl Jonson</div>
+                        <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div class='role'>Front-end developer</div>
+                        <div className='role'>Front-end developer</div>
                     </div>
-                    <div class='card'>
-                        <div class='name'>Jay Torres</div>
-                        <div class='image'>
+                    <div className='card'>
+                        <div className='name'>Jay Torres</div>
+                        <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div class='role'>Front-end developer</div>
+                        <div className='role'>Front-end developer</div>
                     </div>
-                    <div class='card'>
-                        <div class='name'>Jasmine Tu</div>
-                        <div class='image'>
+                    <div className='card'>
+                        <div className='name'>Jasmine Tu</div>
+                        <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div class='role'>Front-end designer</div>
+                        <div className='role'>Front-end designer</div>
                     </div>
-                    <div class='card'>
-                        <div class='name'>Ryan Wang</div>
-                        <div class='image'>
+                    <div className='card'>
+                        <div className='name'>Ryan Wang</div>
+                        <div className='image'>
                             <img src={placeholder}></img>
                         </div>
-                        <div class='role'>Back-end developer</div>
+                        <div className='role'>Back-end developer</div>
                     </div>
                 </div>
             </div>
