@@ -2,7 +2,7 @@ body {
     /* temp gradient bg
     background: linear-gradient(45deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);*/
     background: url("../assets/lined_paper_bg.png");
-    background-size: cover;
+    background-size: 1920px 1080px;
     font-family: "CabinSketchReg", serif;
 }
 
@@ -101,7 +101,7 @@ button {
 #main-boxes-wrapper > .card .card-desc {
     opacity: 1;
     padding: 0 0.25rem;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 }
 
 img {

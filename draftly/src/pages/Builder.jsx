@@ -1,12 +1,12 @@
 import '../css/Builder.css';
-import arrow from '../assets/dashed_arrow_small.png';
+import arrow from '../assets/dashed_arrow.png';
 
 
 function Builder() {
     return (
         <div className='fade-in'>
             <title>Builder | Draftly</title>
-            <div id='section-1'>
+            <div id='builder-section-1'>
                 <div className='title'>
                     Let&apos;s get started
                 </div>
