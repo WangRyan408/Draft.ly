@@ -59,8 +59,9 @@ function Builder() {
         }
         try {
             const response = await axios.post('http://localhost:3000/api/genCV/test', postData);
+            const { downloadUrl } = response.data;
+            window.location.href = downloadUrl;
             console.log(response);
-            //window.location.href = 'http://localhost:3000/api/genCV/test?download=true';
     } catch (error) {
         console.log("Error Sending Post Request: ",error);
     }

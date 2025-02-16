@@ -1,70 +1,54 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Wang's Resume</title>
+    <title>Ryan Wang - Resume</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header, section {
-            padding: 20px 0;
-            border-bottom: solid 1px #333;
-        }
-        .main-header {
-            padding: 30px 0;
-        }
-        h1, h2 {
-            color: #333;
-        }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1, h2, h3 { margin-bottom: 10px; }
+        h1 { font-size: 2em; }
+        .section { margin-bottom: 20px; }
+        .project, .education-item, .work-item { margin-bottom: 10px; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <header class="main-header">
+    <div class="container">
         <h1>Ryan Wang</h1>
-        <p>San Jose, CA · Student at De Anza College (Expected Graduation: Jul 2026)</p>
-    </header>
+        <p>San Jose, CA</p>
 
-    <section>
-        <h2>Education</h2>
-        <p><strong>De Anza College</strong> — Pursuing B.S. in Computer Science</p>
-        <p>Expected Graduation: May/June 2026</p>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <div>
-            <h3>URL Shortener</h3>
-            <p><em>April 2023 - May 2025</em></p>
-            <ul>
-                <li>Implemented User Auth with JWT and cookies, handling session management</li>
-                <li>Database and Schema Validation with MongoDB</li>
-                <li>REST API on Node.js/ExpressJS</li>
-            </ul>
+        <div class="section education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>San Jose State</h3>
+                <p>Aug 2024 - May 2027</p>
+            </div>
+            <div class="education-item">
+                <h3>De Anza College</h3>
+                <p>Sept 2019 - Aug 2024</p>
+            </div>
         </div>
-        <div>
-            <h3>Draft.ly</h3>
-            <p><em>March 2025 - April 2025</em></p>
-            <ul>
-                <li>Implemented OpenAI API for LLM usage</li>
-                <li>Served thousands of students (idk maybe one day)</li>
-            </ul>
-        </div>
-    </section>
-</div>
 
+        <div class="section projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>URL Shortener</h3>
+                <p>June 2022 - December 2024</p>
+                <ul>
+                    <li>Built User Auth using JWT and cookies for session management</li>
+                    <li>Database and Schema Validation using MongoDB</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Draftly</h3>
+                <p>February 2025</p>
+                <ul>
+                    <li>Leveraged OpenAI API to integrate LLMs</li>
+                    <li>Served millions of students (in my dreams)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-```

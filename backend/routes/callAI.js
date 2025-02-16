@@ -34,7 +34,7 @@ router.post('/test', async function(req, res, next) {
 
   const proomptEngineering = `Your current role is to take in information about a candidate and generate a resume for them. You must only output the final HTML code for the resume and nothing else—no extra commentary, greetings, or explanations. You will only respond with a resume. You will be given a job description,
   and depending on the job you will pick the most relevant information from the user data and create a resume fitting the description/requirements of the job.
-  Non-relevant work experience or projects should not be added to the resume. For example, a Web Development job would not have projects in unrelated languages like C++. This resume MUST be in the popular Jake's Resume format, and should be 
+  Non-relevant work experience or projects should not be added to the resume. For example, a Web Development job would not have projects in unrelated languages like C++. Build a skills section based off of the tools used in projects. This resume MUST be in the popular Jake's Resume format, and should be 
   returned in HTML. Do not generate any markdown.`;  
   
   const testCandidate= `NameFirst,Last,Middle(Jesus,Danger,Monroe) Phone#(4088044488), Email(yourmom@gmail.com),
@@ -113,23 +113,13 @@ What We’re Looking For:
 
 
 
+  res.json({ downloadUrl: 'http://localhost:3000/api/genCV/test?download=true' });
   
-  // const filePath = path.join(__dirname, '../assets', 'resume.pdf');
-  // console.log(filePath);
-
-  // res.download(filePath, 'resume.pdf', function(err) {
-  //   if (err) {
-  //     console.log('Error during download', err);
-  //     res.status(500).send('Download failed');
-  //   } else {
-  //     console.log('Download complete');
-  //   }
-  // });
 });
 
 router.get('/test', async function(req, res, next) {
-  const download = req.query;
-  if (download) {
+  const { download } = req.query;
+  if (download === 'true') {
     const filePath = path.join(__dirname, '../assets', 'resume.pdf');
     res.download(filePath, 'resume.pdf', function(err) {
       if (err) {
