@@ -48,7 +48,6 @@ h1 {
     justify-content: center;
 }
 
-
 #stepboxes {
     display: flex;
     flex-direction: row;
@@ -62,7 +61,6 @@ button {
     font-family: "VT323", serif;
     font-size: 36px;
 }
-
 
 #main-boxes-wrapper {
     display: flex;
