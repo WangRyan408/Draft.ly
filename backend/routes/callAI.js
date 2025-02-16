@@ -2,13 +2,20 @@ import express from 'express';
 import 'dotenv/config';
 import OpenAI from 'openai';
 import * as fs from 'node:fs';
-import HTML5ToPDF from 'html5-to-pdf';
+import * as fsPromises from 'node:fs/promises';
+import htmlPdfNode from 'html-pdf-node';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const router = express.Router();
+
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: OPENAI_API_KEY,
 });
 
 /* POST home page. */
@@ -19,12 +26,22 @@ router.get('/', function(req, res) {
 
 
 
-router.get('/test', async function(req, res, next) {
+router.post('/test', async function(req, res, next) {
 
-  const testCandidate= `NameFirst,Last,Middle(John,Adams,Monroe) Phone#(4088044488), Email(johndoe@gmail.com),
-   Websites(google.com), School,StartDate,EndDate,Coursework(De anza college,2023,2025,Math Club Officer), 
-   Experience,StartDate,EndDate,Description(Math Tutor,May 2022, Jun 2023,helped teach k-12 level mathematics), 
-   Project,StartDate,EndDate,Description(Draftly, Feb 2025, Mar 2025, AI Driven Resume Builder for students),
+  console.log('Received data:', req.body);
+  
+  let convoHistory = [];  
+
+  const proomptEngineering = `Your current role is to take in information about a candidate and generate a resume for them. You must only output the final HTML code for the resume and nothing else—no extra commentary, greetings, or explanations. You will only respond with a resume. You will be given a job description,
+  and depending on the job you will pick the most relevant information from the user data and create a resume fitting the description/requirements of the job.
+  Non-relevant work experience or projects should not be added to the resume. For example, a Web Development job would not have projects in unrelated languages like C++. Build a skills section based off of the tools used in projects. This resume MUST be in the popular Jake's Resume format, and should be 
+  returned in HTML. Do not generate any markdown.`;  
+  
+  const testCandidate= `NameFirst,Last,Middle(Jesus,Danger,Monroe) Phone#(4088044488), Email(yourmom@gmail.com),
+   Websites(linkedin.com), School,StartDate,EndDate,Coursework(Foothill College,2023,2025,Math Club Officer), 
+   Experience,StartDate,EndDate,Description(Physics Tutor,May 2022, Jun 2023,helped teach k-12 level mathematics), 
+   Project,StartDate,EndDate,Description({Draftly, Feb 2025, Mar 2025, AI Driven Resume Builder for students},
+   {Igar.io, Jan 2023, Present, Game written in C++ and Unreal}, {Flight Computer, Jan 2016, Apri 2022, Embedded C++ Project to track flight data}),
    Skills( Javascript,Graphic Design), Job Description(Position: Frontend Engineering Intern (Part-Time, Unpaid)
 Location: Remote
 Role Overview:
@@ -48,66 +65,73 @@ What We’re Looking For:
 • Availability to work part-time with flexibility in scheduling.
 • A positive attitude and passion for building impactful technology.)`;
 
+ const userData = JSON.stringify(req.body);
 
-
-  let convoHistory = [];  
-
-  const proomptEngineering = `Your current role is to take in information about a candidate and generate a resume for them. You will also be given a job description,
-  and depending on the job you will pick the most relevant information from the user submitted data and create a resume tailored to the description/requirements of the job.
-  Non-relevant work experience or projects should not be added to the resume. For example, a Game Development job position would not have web development projects listed on the Resume.
-   This resume should be in the popular Jake's format, and the generated resume should be returned in HTML. Do not add any additional markdown formatting or non-resume content. `;
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-4o",
     store: false,
     messages: [
       {"role": "developer", "content": proomptEngineering},
-      {"role": "user", "content": testCandidate}
+      //{"role": "user", "content": testCandidate},
+      {"role": "user", "content": userData}
     ],
+    //reasoning_effort: "medium"
   });
 
 
+  
   convoHistory.push({role: "assistant", content: completion.choices[0].message.content});
   
   let openai_response = convoHistory[convoHistory.length - 1].content;
   console.log(openai_response);
  
-  fs.writeFileSync('resume.html', openai_response.content);
+  fs.writeFileSync('./assets/resume.html', openai_response);
 
-  const run = async () => {
-    const HTML5ToPDF = new HTML5ToPDF({
-      inputPath: path.join(__dirname, '../resume.html'),
-      outputPath: path.join(__dirname, '../resume.pdf'),
-    });
 
-    await HTML5ToPDF.start();
-    await HTML5ToPDF.build();
-    await HTML5ToPDF.close();
-  }
+  //console.log(path.join(__dirname, '../resume.html'));
 
-  (async () => {
+ 
+
+  const convertFile = async () => {
     try {
-      await run()
-      console.log("DONE")
+      const htmlString = await fsPromises.readFile('./assets/resume.html', {encoding: 'utf-8'});
+
+      let options = { format: 'A4' };
+      let file = { content: htmlString };
+
+      const pdfBuffer = await htmlPdfNode.generatePdf(file, options);
+      
+      await fsPromises.writeFile('./assets/resume.pdf', pdfBuffer);
+      console.log('PDF generated successfully');
     } catch (error) {
-      console.error(error)
-      process.exitCode = 1
-    } finally {
-      process.exit();
+      console.error('Error generating PDF:', error);
     }
-  })()
+  };
 
-  const filePath = path.join(__dirname, '../resume.pdf');
+  await convertFile();
+
+
+
+  res.json({ downloadUrl: 'http://localhost:3000/api/genCV/test?download=true' });
   
+});
 
-  res.download(filePath, 'resume.pdf', function(err) {
-    if (err) {
-      console.log('Error during download', err);
-      res.status(500).send('Download failed');
-    } else {
-      console.log('Download complete');
-    }
-  });
+router.get('/test', async function(req, res, next) {
+  const { download } = req.query;
+  if (download === 'true') {
+    const filePath = path.join(__dirname, '../assets', 'resume.pdf');
+    res.download(filePath, 'resume.pdf', function(err) {
+      if (err) {
+        console.log('Error during download', err);
+        res.status(500).send('Download failed');
+      } else {
+        console.log('Download complete');
+      }
+    });
+  } else {
+    res.send('GET request received; no download requested');
+  }
 });
 
 export default router;

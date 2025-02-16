@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 
 //styling
 import '../css/Download.css';
