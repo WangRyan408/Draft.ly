@@ -1,3 +1,4 @@
+/*
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 
 @font-face {
@@ -17,6 +18,7 @@
     font-weight: 400;
     font-stretch: normal;
  }
+*/
 
 /* uncommenting will make all bgs gradient
 body {
@@ -27,7 +29,7 @@ body {
 #title {
     justify-content: center;
     font-size: 3rem;
-    color: black;
+    color: #166C9B;
 }
 
 #arrow img {
@@ -36,17 +38,18 @@ body {
     opacity: 0.75;
 }
 
-#section-1 {
+#builder-section-1 {
     margin-top: 35vh;
     margin-bottom: 30vh;
 }
 
-#section-1 .title {
-    font-family: "CabinSketchReg", sans-serif;
+#builder-section-1 .title {
+    color: #166C9B;
+    font-family: "CabinSketchReg", serif;
     font-size: 5rem;
 }
 
-#section-1 .description {
+#builder-section-1 .description {
     font-size: 1.5rem;
 }
 
@@ -60,10 +63,10 @@ body {
 
 #builder-section-2 .build-label {
     text-align: left;
-    font-family: 'Cabin Sketch', sans-serif;
+    font-family: 'CabinSketchReg', serif;
     padding-bottom: 0.5rem;
     font-size: 2rem;
-    color: rgb(40, 40, 100);
+    color: #166C9B;
     font-weight: bold;
 }
 
@@ -91,7 +94,7 @@ body {
 input {
     height: 2rem;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: black;
     padding: 0.25rem 0.75rem;
     border: 1px solid darkgrey;

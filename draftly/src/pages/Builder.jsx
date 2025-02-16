@@ -5,7 +5,7 @@ import arrow from '../assets/dashed_arrow_small.png';
 function Builder() {
     return (
         <div>
-            <div id='section-1'>
+            <div id='builder-section-1'>
                 <div className='title'>
                     Let&apos;s get started
                 </div>
