@@ -5,7 +5,7 @@ function About() {
     return (
         <div>
             <div id='section-1'>
-                <h1>Why Draftly?</h1>
+                <h1 id='h1-about'>Why Draftly?</h1>
             </div>
             <div id='section-2'>
                 Draftly makes it easy to tailor your resume based on job requirements.
