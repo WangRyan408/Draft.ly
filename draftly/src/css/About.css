@@ -32,18 +32,17 @@ body {
     color: black;
 }
 
-#h1-about { /* changed to # bc just h1 changed all h1 tags in other files too */
-    font-family: 'freight-text-pro', sans-serif;
-    font-size: 5rem;
+#about-section-1 {
+    margin-top: 31.5vh;
+    font-family: "CabinSketchReg", serif;
+    font-size: 80px;
+    color: #166C9B;
 }
 
-#section-1 {
-    margin-top: 35vh;
-}
-
-#section-2 {
-    padding-bottom: 40vh;
+#about-section-2 {
+    margin-top: 20px;
     font-size: 1.5rem;
+    margin-bottom: 21vh;
 }
 
 #devs-wrapper {
@@ -64,15 +63,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
+    background: rgba(138, 184, 219, 0.4);
     border-radius: 0.5rem;
 }
 
 #devs-wrapper-cards > .card > .name {
+    font-family: "VT323", serif;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
     border-radius: 0.5rem 0.5rem 0 0;
     font-size: 1.5rem;
 }
@@ -82,10 +82,11 @@ body {
 }
 
 #devs-wrapper-cards > .card > .role {
+    font-family: "VT323", serif;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
     border-radius: 0 0 0.5rem 0.5rem;
-    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
