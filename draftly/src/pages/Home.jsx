@@ -8,9 +8,6 @@ import "../fonts/CabinSketch-Regular.ttf";
 import logo from '../assets/logo_draft.png';
 import wordmark from '../assets/wordmark.png';
 
-
-
-
 function Home() {
 
     const navigate = useNavigate();

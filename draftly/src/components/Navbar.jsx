@@ -30,6 +30,16 @@ export default function Navbar() {
                 Builder
               </NavLink>
             </li>
+            //TEMP FOR TESTING
+            <li className='nav-link'>
+              <NavLink
+                to="/Loading"
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+              >
+                Loading
+              </NavLink>
+            </li>
+
           </ul>
         </nav>
       );
