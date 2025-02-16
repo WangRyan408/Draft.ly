@@ -5,6 +5,7 @@ import Builder from './pages/Builder.jsx';
 import './App.css'
 import Navbar from './components/Navbar.jsx';
 import Loading from './pages/Loading.jsx';
+import Download from './pages/Download.jsx';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Builder" element={<Builder />} />
           <Route path="/Loading" element={<Loading />} />
+          <Route path="/Download" element={<Download />} />
         </Routes>
       </BrowserRouter>
     </>

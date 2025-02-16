@@ -1,0 +1,17 @@
+#download-msg {
+    margin-top: 300px;
+}
+
+#thank-you-msg {
+    margin-top: -26px;
+}
+
+button {
+    border-radius: 3px;
+    border: 1px solid #8AB8DB;
+    background: linear-gradient(#8AB8DB 0%, #B7CDDE 100%);
+    color: white;
+    font-family: "VT323", serif;
+    font-size: 24px;
+    margin-top: 16px;
+}
