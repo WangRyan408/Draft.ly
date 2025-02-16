@@ -3,3 +3,9 @@
   margin: 0 auto;
   text-align: center;
 }
+
+@font-face {
+  font-family: "CabinSketchReg";
+  src: local("CabinSketch-Regular"), 
+      url("./fonts/CabinSketch-Regular.ttf") format("truetype");
+}

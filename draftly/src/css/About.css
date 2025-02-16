@@ -1,0 +1,74 @@
+@font-face {
+    font-family:"freight-text-pro";
+    src:url("https://use.typekit.net/af/4b422b/000000000000000077359fbd/30/l?primer=629e39fc9fc5fa7badfb819dccff4cdd2f4364f543e39758601adfa6035719c9&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/4b422b/000000000000000077359fbd/30/d?primer=629e39fc9fc5fa7badfb819dccff4cdd2f4364f543e39758601adfa6035719c9&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/4b422b/000000000000000077359fbd/30/a?primer=629e39fc9fc5fa7badfb819dccff4cdd2f4364f543e39758601adfa6035719c9&fvd=n5&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: normal;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
+}
+
+#title {
+    justify-content: center;
+    font-size: 3rem;
+    color: black;
+}
+
+h1 {
+    font-family: 'freight-text-pro', sans-serif;
+    font-size: 5rem;
+}
+
+#section-1 {
+    margin-top: 35vh;
+}
+
+#section-2 {
+    padding-bottom: 40vh;
+    font-size: 1.5rem;
+}
+
+#devs-wrapper {
+    padding-top: 0vh;
+    padding-bottom: 5vh;
+}
+
+#devs-wrapper-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal columns */
+    grid-template-rows: auto;
+    /* rows adjust based on content */
+    gap: 2rem;
+}
+
+#devs-wrapper-cards > .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
+    border-radius: 0.5rem;
+}
+
+#devs-wrapper-cards > .card > .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+#devs-wrapper-cards > .card > .image {
+    display: block;
+}
+
+#devs-wrapper-cards > .card > .role {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
+    border-radius: 0 0 0.5rem 0.5rem;
+}

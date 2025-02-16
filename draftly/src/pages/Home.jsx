@@ -1,37 +1,76 @@
 import { useNavigate } from 'react-router-dom';
 
+//styling
 import '../css/Home.css';
+import "../fonts/CabinSketch-Regular.ttf";
+
+//images
+import logo from '../assets/logo_draft.png';
+import wordmark from '../assets/wordmark.png';
+
+
 
 
 function Home() {
 
     const navigate = useNavigate();
 
-
     return (
         <div id='home'>
-        
+
             <div id='landing-page'>
-                <h1 id='title'>Welcome to Draft.ly</h1>
+                <br></br>
+                <div id='landing-page-image'>
+                    <img src={wordmark}></img>
+                </div>
             </div>
+
             <div id='section-2'>
-                <h2 id='subtext-1'>Custom Resume Generation on a job by job basis</h2>
-                <button id='get-started' onClick={() =>navigate('/Builder')}>Get Started</button>
+                <h2 id='subtext-1'>Custom resume generation on a job-by-job basis.</h2>
+                <button id='get-started' onClick={() => navigate('/Builder')}>Get Started</button>
             </div>
+
             <div id='section-3'>
-                <div>Generate your resume in 3 easy steps</div>
-                <div id='stepboxes'>
-                    <div>
 
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
+                <h2>Generate your resume in three easy steps.</h2>
 
+                <div id='main-boxes-wrapper'>
+                    <div class="card">
+                        <div>
+                            Step 1
+                                <div class="card-desc">
+                                    Enter your information.
+                                </div>
+                                <div class="card-image">
+                                    <img src={logo}></img>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            Step 2
+                                <div class="card-desc">
+                                    Enter job description.
+                                </div>
+                                <div class="card-image">
+                                    <img src={logo}></img>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            Step 3
+                                <div class="card-desc">
+                                    Generate your resume!
+                                </div>
+                                <div class="card-image">
+                                    <img src={logo}></img>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 
@@ -39,7 +78,5 @@ function Home() {
 
 
 }
-
-
 
 export default Home;
