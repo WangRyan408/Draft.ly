@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+
 @font-face {
     font-family:"freight-text-pro";
     src:url("https://use.typekit.net/af/4b422b/000000000000000077359fbd/30/l?primer=629e39fc9fc5fa7badfb819dccff4cdd2f4364f543e39758601adfa6035719c9&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/4b422b/000000000000000077359fbd/30/d?primer=629e39fc9fc5fa7badfb819dccff4cdd2f4364f543e39758601adfa6035719c9&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/4b422b/000000000000000077359fbd/30/a?primer=629e39fc9fc5fa7badfb819dccff4cdd2f4364f543e39758601adfa6035719c9&fvd=n5&v=3") format("opentype");
@@ -6,6 +9,15 @@
     font-weight: 500;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: "acumin-variable";
+    src:url("https://use.typekit.net/af/cd27bb/0000000000000000774be2a6/30/l?primer=5ae6b4fcd8792df98bdb58ed7ac9cb4f4faf877ed761ae9b1823426301d17b70&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/cd27bb/0000000000000000774be2a6/30/d?primer=5ae6b4fcd8792df98bdb58ed7ac9cb4f4faf877ed761ae9b1823426301d17b70&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/cd27bb/0000000000000000774be2a6/30/a?primer=5ae6b4fcd8792df98bdb58ed7ac9cb4f4faf877ed761ae9b1823426301d17b70&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+ }
 
 body {
     background: linear-gradient(45deg, rgba(138,184,219,0.35) 0%, rgba(161,206,177,0.35) 100%);
@@ -20,7 +32,7 @@ body {
 
 
 #section-1 {
-    margin-top: 40vh;
+    margin-top: 37.5vh;
     margin-bottom: 30vh;
 }
 
@@ -30,18 +42,57 @@ body {
 }
 
 #section-1 .description {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-#section-2 {
-    height: 80vh;
+#builder-section-2 {
     border-radius: 3rem;
     border: 2px solid #333;
     padding: 2.5rem;
     color: #333;
+    margin-bottom: 20vh;
 }
 
-#section-2 .build-label {
+#builder-section-2 .build-label {
     text-align: left;
     font-family: 'Cabin Sketch', sans-serif;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    color: rgb(40, 40, 100);
+    font-weight: bold;
+}
+
+#builder-section-2 .builder-input-wrapper-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+#builder-section-2 .builder-input-wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+#builder-section-2 .builder-input-wrapper-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+input {
+    height: 2rem;
+    font-family: 'acumin-variable', sans-serif;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.75rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.job-desc {
+    height: 6rem;
 }

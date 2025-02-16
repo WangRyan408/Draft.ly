@@ -15,7 +15,6 @@ function Home() {
         <div id='home'>
 
             <div id='landing-page'>
-                <h1 id='title'>Welcome to Draft.ly</h1>
                 <br></br>
                 <div id='landing-page-image'>
                     <img src={wordmark}></img>
