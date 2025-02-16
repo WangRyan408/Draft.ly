@@ -9,7 +9,8 @@ import airplane from '../assets/paper_airplane.gif';
 
 function Loading() {
     return (
-        <div>
+        <div className='fade-in'>
+            <title>Loading... | Draftly</title>
             <div id='loading-page'>
             <img src={logo} alt="loading..." />
             </div>
