@@ -12,7 +12,7 @@ And the best part? We offer a free tier to help those who lack the resources to 
 
 Job hunting doesn't have to be a struggle. Let's make it easier for everyone.
 
-### Hack for Humanity 2025 @ Santa Clara University
+### Developers
 
 - Wilfredo Concepion
 - Andre Dinh
@@ -20,3 +20,5 @@ Job hunting doesn't have to be a struggle. Let's make it easier for everyone.
 - Jay Torres
 - Jasmine Tu
 - Ryan Wang
+
+### Hack for Humanity 2025 @ Santa Clara University
