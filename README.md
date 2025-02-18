@@ -22,3 +22,20 @@ Job hunting doesn't have to be a struggle. Let's make it easier for everyone.
 - Ryan Wang
 
 ### Hack for Humanity 2025 @ Santa Clara University
+
+
+### How to run dev server
+
+#### 1. Install dependencies
+
+- Ensure you have Node.js (Version 18+) installed.
+- Install dependencies with `npm install` in both subfolders (draftly/backend).
+- Create a .env file and add your own OpenAI API key in the file.
+
+#### 2. Run the dev servers
+- cd into draftly (the frontend) and run `npm run dev` to open up the dev server on localhost:5173.
+- cd into backend and run `npm start` to start the backend server on localhost:3000.
+
+#### 3. Open the frontend in your browser
+- Open http://localhost:5173 in your browser.
+- Profit!
